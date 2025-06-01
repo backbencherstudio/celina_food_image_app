@@ -36,7 +36,7 @@ lib/
 ├── src/                     # Feature-based organization
 │   ├── common_widgets/      # Reusable UI components (buttons, cards, etc.)
 │   └── feature/             # Specific app features (e.g., auth, home, profile)
-└── main.dart            # Entry point of the app
+└── main.dart                # Entry point of the app
 ```
 
 ## Getting Started
