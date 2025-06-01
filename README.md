@@ -19,6 +19,7 @@ Morsl is a mobile app developed using **Flutter**, allowing users to explore a v
 
 ## Folder Structure
 
+```bash
 lib/
 ├── core/                    # Core functionality (e.g., theme, constants, services)
 │   ├── constants/           # Constants (e.g., padding, icon names)
@@ -36,8 +37,7 @@ lib/
 │   ├── common_widgets/      # Reusable UI components (buttons, cards, etc.)
 │   └── feature/             # Specific app features (e.g., auth, home, profile)
 └── main.dart            # Entry point of the app
-
-
+```
 
 ## Getting Started
 
