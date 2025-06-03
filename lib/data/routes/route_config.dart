@@ -9,6 +9,11 @@ class RouteConfig {
         path: RouteName.initialRoute,
         builder: (context, state) => const SplashScreen(),
       ),
+      GoRoute(
+        name: RouteName.homeScreen,
+        path: RouteName.homeScreen,
+        builder: (context, state) => const HomeScreen(),
+      ),
     ],
   );
 }
