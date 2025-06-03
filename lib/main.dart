@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) {
         return MaterialApp.router(
-          title: 'Posse',
+          title: 'Morsl',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,
           //darkTheme: AppTheme.darkTheme,
