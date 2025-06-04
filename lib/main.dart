@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:morsl_app_celina0057/core/theme/app_theme.dart';
-import 'data/routes/route_import_part.dart';
+import 'package:morsl_app_celina0057/data/routes/route_config.dart';
 
 void main() {
-  runApp(const MyApp());
   SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle(
+    const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       systemNavigationBarColor: Colors.transparent,
       systemNavigationBarIconBrightness: Brightness.dark,
       statusBarIconBrightness: Brightness.dark,
     ),
   );
+
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -22,17 +24,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(430, 932),
+      designSize: const Size(430, 932),
       minTextAdapt: true,
-      builder: (context, child) {
-        return MaterialApp.router(
-          title: 'Posse',
-          debugShowCheckedModeBanner: false,
-          theme: AppTheme.lightTheme,
-          //darkTheme: AppTheme.darkTheme,
-          routerConfig: RouteConfig().goRouter,
-        );
-      },
+      builder: (context, child) => MaterialApp.router(
+        title: 'Morsl',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.lightTheme,
+        routerConfig: RouteConfig().goRouter,
+      ),
     );
   }
 }
