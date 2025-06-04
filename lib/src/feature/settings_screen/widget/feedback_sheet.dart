@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:morsl_app_celina0057/core/constant/icons.dart';
+import 'package:morsl_app_celina0057/src/feature/Reset_screen/widgets/succesfully_clear_bottomsheet.dart';
 import 'package:morsl_app_celina0057/src/feature/favorite_screen/widgets/custom_button.dart';
 
-void showCustomSheet(BuildContext context) {
+void feedbackSheet(BuildContext context) {
   showModalBottomSheet(
     context: context,
     isScrollControlled: true,
@@ -42,25 +43,32 @@ void showCustomSheet(BuildContext context) {
                       ),
                     ),
                     SizedBox(height: 28.h),
-                    SvgPicture.asset(Appicons.deleteButton),
-                    SizedBox(height: 16.h),
 
                     Text(
-                      "Are You Sure?",
-                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                        color: Color(0xff131313),
+                      "Feedback",
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        color: Color(0xff4B4B4B),
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                     SizedBox(height: 16.h),
-
-                    Text(
-                      "Do you want to remove these from favourites?",
-                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: Color(0xff9CA4AB),
-                      ),
+                    TextFormField(
+                      decoration: InputDecoration(hintText: "Name"),
                     ),
                     SizedBox(height: 16.h),
 
+                    TextFormField(
+                      decoration: InputDecoration(hintText: "E-mail"),
+                    ),
+                    SizedBox(height: 16.h),
+
+                    SizedBox(
+                      height: 100.h,
+                      width: 366.w,
+                      child: TextFormField(
+                        decoration: InputDecoration(hintText: "Description"),
+                      ),
+                    ),
                     Row(
                       children: [
                         Expanded(
@@ -73,7 +81,7 @@ void showCustomSheet(BuildContext context) {
                             },
                           ),
                         ),
-                        SizedBox(width: 11.h),
+                        SizedBox(width: 12.h),
                         Expanded(
                           child: CustomButton(
                             color: Color(0xff9CADA6),
@@ -81,6 +89,9 @@ void showCustomSheet(BuildContext context) {
                             textColor: Color(0xffFFFFFF),
                             onTap: () {
                               Navigator.pop(context);
+                              showsuccesConfirmSheet(context,
+                              "Feedback Successfully Given"
+                              );
                             },
                           ),
                         ),

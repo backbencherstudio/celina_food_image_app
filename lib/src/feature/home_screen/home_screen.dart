@@ -67,7 +67,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
               color: AppColorScheme.secondaryColor,
               borderRadius: BorderRadius.circular(100),
             ),
-            child: SvgPicture.asset(AppIcons.filterIcons),
+            child: SvgPicture.asset(Appicons.filterIcons),
           ),
           AutoSpacer(space: 16.w),
         ],

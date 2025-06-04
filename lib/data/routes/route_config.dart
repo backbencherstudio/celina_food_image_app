@@ -2,6 +2,8 @@ import 'package:go_router/go_router.dart';
 import 'package:morsl_app_celina0057/data/routes/route_const.dart';
 import 'package:morsl_app_celina0057/src/feature/Parents_screen/view/parents_screen.dart';
 import 'package:morsl_app_celina0057/src/feature/favorite_screen/view/favorite_screen.dart';
+import 'package:morsl_app_celina0057/src/feature/home_screen/home_screen.dart';
+import 'package:morsl_app_celina0057/src/feature/settings_screen/view/terms&condition.dart';
 import 'package:morsl_app_celina0057/src/feature/splash_screen/splash_screen.dart';
 
 class RouteConfig {
@@ -13,8 +15,13 @@ class RouteConfig {
         path: RouteName.initialRoute,
         builder: (context, state) => const SplashScreen(),
       ),
+       GoRoute(
+        name: RouteName.policyScreen,
+        path: RouteName.policyScreen,
+        builder: (context, state) => const PrivacyPolicy(),
+      ),
       GoRoute(
-<<<<<<< HEAD
+
         name: RouteName.favorite,
         path: RouteName.favorite,
         builder: (context, state) => const FavoriteScreen(),
@@ -24,6 +31,13 @@ class RouteConfig {
         path: RouteName.parentScreen,
         builder: (context, state) => const ParentScreen(),
       ),
+     GoRoute(
+         name: RouteName.homeScreen,
+        path: RouteName.homeScreen,
+        builder: (context, state) => const HomeScreen(),
+      ),
+      
+      
 
 
       // StatefulShellRoute.indexedStack(
@@ -67,12 +81,7 @@ class RouteConfig {
       //     ),
       //   ],
       // ),
-=======
-        name: RouteName.homeScreen,
-        path: RouteName.homeScreen,
-        builder: (context, state) => const HomeScreen(),
-      ),
->>>>>>> ab52852986b112959b2a3545047ffb60ad6944c3
+
     ],
   );
 }
