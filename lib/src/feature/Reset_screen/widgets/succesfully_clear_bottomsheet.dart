@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:morsl_app_celina0057/core/constant/icons.dart';
 import 'package:morsl_app_celina0057/src/feature/favorite_screen/widgets/custom_button.dart';
 
-void showCustomSheet(BuildContext context) {
+void showsuccesConfirmSheet(BuildContext context) {
   showModalBottomSheet(
     context: context,
     isScrollControlled: true,
@@ -42,49 +42,30 @@ void showCustomSheet(BuildContext context) {
                       ),
                     ),
                     SizedBox(height: 28.h),
-                    SvgPicture.asset(Appicons.deleteButton),
+                    SvgPicture.asset(
+                      Appicons.greenCircle,
+                      height: 54.h,
+                      width: 54.w,
+                    ),
                     SizedBox(height: 16.h),
 
                     Text(
-                      "Are You Sure?",
+                      "Swipe history cleared.",
                       style: Theme.of(context).textTheme.titleSmall!.copyWith(
                         color: Color(0xff131313),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                 
 
-                    Text(
-                      "Do you want to remove these from favourites?",
-                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: Color(0xff9CA4AB),
-                      ),
-                    ),
+                  
                     SizedBox(height: 16.h),
-
-                    Row(
-                      children: [
-                        Expanded(
-                          child: CustomButton(
-                            color: Color(0xffD7CCC8),
-                            text: "Cancel",
-                            textColor: Color(0xff4A4C56),
-                            onTap: () {
-                              Navigator.pop(context);
-                            },
-                          ),
-                        ),
-                        SizedBox(width: 11.h),
-                        Expanded(
-                          child: CustomButton(
-                            color: Color(0xff9CADA6),
-                            text: "Continue",
-                            textColor: Color(0xffFFFFFF),
-                            onTap: () {
-                              Navigator.pop(context);
-                            },
-                          ),
-                        ),
-                      ],
+                    CustomButton(
+                      color: Color(0xff9CADA6),
+                      text: "Continue",
+                      textColor: Color(0xff4A4C56),
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
                     ),
                     SizedBox(height: 28.h),
                   ],

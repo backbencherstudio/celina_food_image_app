@@ -10,12 +10,13 @@ class CustomButton extends StatelessWidget {
   final String text;
   final Color textColor;
 void Function()? onTap ;
-
-  CustomButton({super.key,
+ final double? width;
+  CustomButton( {super.key,
   required this.color,
   required this.text,
   required this.textColor,
-    required this.onTap
+    required this.onTap,
+    this.width,
   });
 
   @override
@@ -24,7 +25,7 @@ void Function()? onTap ;
       onTap: onTap,
       child: Container(
         height: 48.h,
-        width:326.w ,
+        width:width ?? 326.w  ,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(32.r),
           color: color,
