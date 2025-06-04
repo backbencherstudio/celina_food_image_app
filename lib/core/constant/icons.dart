@@ -23,5 +23,7 @@ class Appicons{
 
 
   static const filterIcons = 'assets/icons/filter.svg';
+    static const logo = 'assets/icons/logo.svg';
+
 
 }
