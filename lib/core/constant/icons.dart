@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Appicons{
   static const String circle = "assets/icons/circle.svg";
   static const String deleteButton = "assets/icons/button.svg";
@@ -22,4 +23,8 @@ class Appicons{
 
 
   
+=======
+class AppIcons{
+  static const filterIcons = 'assets/icons/filter.svg';
+>>>>>>> ab52852986b112959b2a3545047ffb60ad6944c3
 }

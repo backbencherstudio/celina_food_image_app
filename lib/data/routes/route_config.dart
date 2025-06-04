@@ -14,6 +14,7 @@ class RouteConfig {
         builder: (context, state) => const SplashScreen(),
       ),
       GoRoute(
+<<<<<<< HEAD
         name: RouteName.favorite,
         path: RouteName.favorite,
         builder: (context, state) => const FavoriteScreen(),
@@ -66,6 +67,12 @@ class RouteConfig {
       //     ),
       //   ],
       // ),
+=======
+        name: RouteName.homeScreen,
+        path: RouteName.homeScreen,
+        builder: (context, state) => const HomeScreen(),
+      ),
+>>>>>>> ab52852986b112959b2a3545047ffb60ad6944c3
     ],
   );
 }

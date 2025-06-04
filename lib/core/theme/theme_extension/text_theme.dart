@@ -21,18 +21,18 @@ class AppTextTheme {
       color: Colors.black87,
     ),
     titleLarge: GoogleFonts.poppins(
-      fontSize: 22.0.sp,
+      fontSize: 24.0.sp,
       fontWeight: FontWeight.w500,
       color: Colors.black87,
     ),
     titleMedium: GoogleFonts.poppins(
-      fontSize: 18.0.sp,
+      fontSize: 22.0.sp,
       fontWeight: FontWeight.w500,
       color: Colors.black87,
     ),
 
     titleSmall: GoogleFonts.poppins(
-      fontSize: 16.0.sp,
+      fontSize: 20.0.sp,
       fontWeight: FontWeight.w500,
       color: Colors.black54,
     ),
