@@ -2,8 +2,13 @@
 
 import 'package:go_router/go_router.dart';
 import 'package:morsl_app_celina0057/data/routes/route_const.dart';
+<<<<<<< HEAD
+import 'package:morsl_app_celina0057/src/feature/Parents_screen/riverpod/dummy_screen.dart';
+import 'package:morsl_app_celina0057/src/feature/Parents_screen/view/Navbar.dart';
+import 'package:morsl_app_celina0057/src/feature/favorite_screen/view/favorite_screen.dart';
+=======
 import 'package:morsl_app_celina0057/src/feature/home_screen/home_screen.dart';
+>>>>>>> ab52852986b112959b2a3545047ffb60ad6944c3
 
 import '../../src/feature/splash_screen/splash_screen.dart';
 
-part 'route_config.dart';
