@@ -3,6 +3,7 @@ import 'package:morsl_app_celina0057/data/routes/route_const.dart';
 import 'package:morsl_app_celina0057/src/feature/Parents_screen/view/parents_screen.dart';
 import 'package:morsl_app_celina0057/src/feature/favorite_screen/view/favorite_screen.dart';
 import 'package:morsl_app_celina0057/src/feature/home_screen/home_screen.dart';
+import 'package:morsl_app_celina0057/src/feature/settings_screen/view/terms&condition.dart';
 import 'package:morsl_app_celina0057/src/feature/splash_screen/splash_screen.dart';
 
 class RouteConfig {
@@ -13,6 +14,11 @@ class RouteConfig {
         name: RouteName.initialRoute,
         path: RouteName.initialRoute,
         builder: (context, state) => const SplashScreen(),
+      ),
+       GoRoute(
+        name: RouteName.policyScreen,
+        path: RouteName.policyScreen,
+        builder: (context, state) => const PrivacyPolicy(),
       ),
       GoRoute(
 

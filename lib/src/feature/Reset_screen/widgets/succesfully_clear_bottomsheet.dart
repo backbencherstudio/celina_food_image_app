@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:morsl_app_celina0057/core/constant/icons.dart';
 import 'package:morsl_app_celina0057/src/feature/favorite_screen/widgets/custom_button.dart';
 
-void showsuccesConfirmSheet(BuildContext context) {
+void showsuccesConfirmSheet(BuildContext context,  String text) {
   showModalBottomSheet(
     context: context,
     isScrollControlled: true,
@@ -50,9 +50,9 @@ void showsuccesConfirmSheet(BuildContext context) {
                     SizedBox(height: 16.h),
 
                     Text(
-                      "Swipe history cleared.",
+                      text,
                       style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                        color: Color(0xff131313),
+                        color: Color(0xff4B4B4B),
                       ),
                     ),
                  
