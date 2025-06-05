@@ -3,6 +3,8 @@ import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:morsl_app_celina0057/src/common_widgets/common_widgets.dart';
+import 'package:morsl_app_celina0057/src/feature/home_screen/bottom_sheet_content/bottom_sheet_content.dart';
 import 'package:morsl_app_celina0057/src/feature/home_screen/widgets/show_status.dart';
 
 import '../../../core/constant/icons.dart';
@@ -59,15 +61,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
       appBar: AppBar(
         title: Text('Morsl', style: Theme.of(context).textTheme.titleLarge),
         actions: [
-          Container(
-            height: 40.r,
-            width: 40.r,
-            padding: EdgeInsets.all(8.r),
-            decoration: BoxDecoration(
-              color: AppColorScheme.secondaryColor,
-              borderRadius: BorderRadius.circular(100),
+          GestureDetector(
+            onTap: (){
+              CommonWidget.openBottomSheet(context, BottomSheetContent());
+            },
+            child: Container(
+              height: 40.r,
+              width: 40.r,
+              padding: EdgeInsets.all(8.r),
+              decoration: BoxDecoration(
+                color: AppColorScheme.secondaryColor,
+                borderRadius: BorderRadius.circular(100),
+              ),
+              child: SvgPicture.asset(Appicons.filterIcons),
             ),
-            child: SvgPicture.asset(Appicons.filterIcons),
           ),
           AutoSpacer(space: 16.w),
         ],
