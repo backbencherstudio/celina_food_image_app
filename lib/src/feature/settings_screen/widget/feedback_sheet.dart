@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:morsl_app_celina0057/core/constant/icons.dart';
 import 'package:morsl_app_celina0057/src/feature/Reset_screen/widgets/succesfully_clear_bottomsheet.dart';
 import 'package:morsl_app_celina0057/src/feature/favorite_screen/widgets/custom_button.dart';
 
@@ -66,9 +64,12 @@ void feedbackSheet(BuildContext context) {
                       height: 100.h,
                       width: 366.w,
                       child: TextFormField(
+                        maxLines: null, 
+                        expands: true,
                         decoration: InputDecoration(hintText: "Description"),
                       ),
                     ),
+                    SizedBox(height: 16.h,),
                     Row(
                       children: [
                         Expanded(
@@ -89,8 +90,9 @@ void feedbackSheet(BuildContext context) {
                             textColor: Color(0xffFFFFFF),
                             onTap: () {
                               Navigator.pop(context);
-                              showsuccesConfirmSheet(context,
-                              "Feedback Successfully Given"
+                              showsuccesConfirmSheet(
+                                context,
+                                "Feedback Successfully Given",
                               );
                             },
                           ),

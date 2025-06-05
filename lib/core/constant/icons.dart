@@ -29,6 +29,6 @@ class Appicons{
     static const String term = "assets/icons/term.svg";
   static const String bell = "assets/icons/bell.svg";
   static const String arrow = "assets/icons/backarrow.svg";
-
+  static const String backarrow = "assets/icons/backshid.svg";
 
 }

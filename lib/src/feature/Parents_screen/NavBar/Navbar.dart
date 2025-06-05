@@ -2,6 +2,7 @@
 // ignore_for_file: use_super_parameters
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:morsl_app_celina0057/core/constant/icons.dart';
 
@@ -49,24 +50,32 @@ class CustomBottomNavBar extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   currentIndex == 0 ? Appicons.homeC : Appicons.home,
+                   height: 32.h,
+                width: 32.w,
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   currentIndex == 1 ? Appicons.heartC : Appicons.heart,
+                   height: 32.h,
+                width: 32.w,
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   currentIndex == 2 ? Appicons.redoC : Appicons.redo,
+                height: 36.h,
+                width: 36.w,
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   currentIndex == 3 ? Appicons.settingsC : Appicons.settings,
+                   height: 32.h,
+                width: 32.w,
                 ),
                 label: '',
               ),

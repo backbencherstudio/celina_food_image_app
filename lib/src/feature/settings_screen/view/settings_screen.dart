@@ -44,7 +44,7 @@ class SettingsScreen extends StatelessWidget {
               pic: Appicons.term,
               text: 'Terms & Conditions',
               onTap: () {
-                context.go(RouteName.policyScreen);
+                context.push(RouteName.policyScreen);
               },
             ),
             SizedBox(height: 8.h),
