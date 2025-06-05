@@ -27,14 +27,14 @@ class FavoriteScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.only(left: 24.w, right: 24.w),
-        child: Column(
-          children: [
-            SizedBox(height: 50.h),
-            Consumer(
-              builder: (context, ref,_) {
-                 final checkState = ref.watch(checkProvider);
-                    final checkNotifier = ref.read(checkProvider.notifier);
-                return Row(
+        child: Consumer(
+          builder: (context, ref, _) {
+            final checkState = ref.watch(checkProvider);
+            final checkNotifier = ref.read(checkProvider.notifier);
+            return Column(
+              children: [
+                SizedBox(height: 50.h),
+                Row(
                   children: [
                     Text(
                       "Your Favorites",
@@ -44,90 +44,101 @@ class FavoriteScreen extends StatelessWidget {
                       ),
                     ),
                     Spacer(),
-                if(!checkState.isSelected)
-                  
-                     Row(
-                          children: [
-                            CustomCheckbox(
-                              isSelected: checkState.isSelected,
-                              onTap: () {
-                                checkNotifier.toggleSingle();
-                              },
-                            ),
-                            SizedBox(width: 6.w),
-                            Text(
-                              "Select",
-                              style: style.bodyMedium!.copyWith(
-                                color: Color(0xff4B4B4B),
-                              ),
-                            ),
-                          ],
-                        ),
-                  
-                         if(checkState.isSelected )    
-                    Row(
-                      children: [
-                        CustomCheckbox(isSelected: checkState.isAllSelected, onTap: () {
-                          checkNotifier.toggleAll();
-                        }),
-                        SizedBox(width: 6.w),
-                        Text(
-                          "Select All",
-                          style: style.bodyMedium!.copyWith(
-                            color: Color(0xff4B4B4B),
+                    if (!checkState.isSelected)
+                      Row(
+                        children: [
+                          CustomCheckbox(
+                            isSelected: checkState.isSelected,
+                            onTap: () {
+                              checkNotifier.toggleSingle();
+                            },
                           ),
-                        ),
-                        SizedBox(width: 24.w),
-                        DeleteButton(),
-                      ],
-                    ),
-                  ],
-                );
-              }
-            ),
-            Expanded(
-              child: favList.isEmpty
-                  ? SvgPicture.asset(Appicons.noFav)
-                  : GridView.builder(
-                      itemCount: favList.length,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 16.w,
-                        mainAxisSpacing: 15.h,
-                        childAspectRatio: 2 / 3,
+                          SizedBox(width: 6.w),
+                          Text(
+                            "Select",
+                            style: style.bodyMedium!.copyWith(
+                              color: Color(0xff4B4B4B),
+                            ),
+                          ),
+                        ],
                       ),
 
-                      itemBuilder: (context, index) {
-                        return ClipRRect(
-                          borderRadius: BorderRadius.circular(24.r),
-                          child: Stack(
-                            children: [
-                              Positioned.fill(
-                                child: Image.asset(
-                                  favList[index],
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Positioned(
-                                top: 13.h,
-                                right: 13.w,
-                                child:CustomGridCheckbox(isSelected: false,onTap: () {
-                                
-                              }, ) ),
-                              //blurr thingyyyy
-                              Positioned(
-                                bottom: -3,
-                                left: 0,
-                                right: 0,
-                                child: Glassbox(text: "Steak"),
-                              ),
-                            ],
+                    if (checkState.isSelected)
+                      Row(
+                        children: [
+                          CustomCheckbox(
+                            isSelected: checkState.isAllSelected,
+                            onTap: () {
+                              checkNotifier.toggleAll();
+                            },
                           ),
-                        );
-                      },
-                    ),
-            ),
-          ],
+                          SizedBox(width: 6.w),
+                          Text(
+                            "Select All",
+                            style: style.bodyMedium!.copyWith(
+                              color: Color(0xff4B4B4B),
+                            ),
+                          ),
+                          SizedBox(width: 24.w),
+                          DeleteButton(),
+                        ],
+                      ),
+                  ],
+                ),
+
+                Expanded(
+                  child: favList.isEmpty
+                      ? SvgPicture.asset(Appicons.noFav)
+                      : GridView.builder(
+                          itemCount: favList.length,
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                crossAxisSpacing: 16.w,
+                                mainAxisSpacing: 15.h,
+                                childAspectRatio: 2 / 3,
+                              ),
+
+                          itemBuilder: (context, index) {
+                            return ClipRRect(
+                              borderRadius: BorderRadius.circular(24.r),
+                              child: Stack(
+                                children: [
+                                  Positioned.fill(
+                                    child: Image.asset(
+                                      favList[index],
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+
+                                  if (checkState.isSelected)
+                                    Positioned(
+                                      top: 13.h,
+                                      right: 13.w,
+                                      child: CustomGridCheckbox(
+                                        isSelected: checkState.isAllSelected,
+
+                                        onTap: () {
+                                          checkNotifier.toggleSingle();
+                                        },
+                                      ),
+                                    ),
+                                  //blurr thingyyyy
+                                  Positioned(
+                                    bottom: -3,
+                                    left: 0,
+                                    right: 0,
+                                    child: Glassbox(text: "Steak"),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        ),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );

@@ -16,8 +16,8 @@ class CustomGridCheckbox extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 20.w,
-        height: 20.h,
+        width: 24.w,
+        height: 24.h,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6.r),
           border: Border.all(

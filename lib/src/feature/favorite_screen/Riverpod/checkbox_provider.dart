@@ -9,7 +9,9 @@ final checkProvider = StateNotifierProvider<checkNotifier , CheckboxModel>( (ref
 
 class checkNotifier extends StateNotifier<CheckboxModel>{
 
-  checkNotifier():super(CheckboxModel(isSelected: false, isAllSelected: false));
+  checkNotifier():super(CheckboxModel(isSelected: false, isAllSelected: false,
+  
+  ));
 
 
   void toggleSingle(){
