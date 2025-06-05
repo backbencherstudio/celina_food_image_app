@@ -1,7 +1,10 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:morsl_app_celina0057/core/constant/padding.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:morsl_app_celina0057/core/constant/icons.dart';
 import 'package:morsl_app_celina0057/src/feature/settings_screen/riverpod/scrool_provider.dart';
 import 'package:morsl_app_celina0057/src/feature/settings_screen/widget/policyCard.dart';
 
@@ -16,10 +19,21 @@ class PrivacyPolicy extends ConsumerWidget {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: true,
+        
+        // automaticallyImplyLeading: true,
         title: Text('Terms & Conditions', style: textTheme.titleLarge),
         backgroundColor: Color(0xffF4F1EC),
-      
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Padding(
+            padding:  EdgeInsets.only(left:  24.w, right: 16.w, top: 24.h , bottom: 24.h),
+            child: SvgPicture.asset(Appicons.backarrow,
+                     
+            ),
+          )),
+        
       ),
       body: Padding(
         padding: EdgeInsetsGeometry.all(24),
@@ -49,7 +63,7 @@ class PrivacyPolicy extends ConsumerWidget {
                             },
                           ),
                         ),
-                        SizedBox(width: 8.w,),
+                        SizedBox(width: 8.w),
                         Container(
                           height: scrollModel.scrollBarHeight,
                           width: scrollModel.scrollBarWidth,
@@ -60,8 +74,7 @@ class PrivacyPolicy extends ConsumerWidget {
                           child: Stack(
                             children: [
                               Positioned(
-                                top:
-                                scrollModel.indicatorPosition,
+                                top: scrollModel.indicatorPosition,
                                 child: Container(
                                   width: scrollModel.scrollBarWidth,
                                   height: scrollModel.indicatorHeight,

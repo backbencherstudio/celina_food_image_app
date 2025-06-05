@@ -72,10 +72,9 @@ class FavoriteScreen extends StatelessWidget {
 
                               //blurr thingyyyy
                               Positioned(
-                                bottom: 0,
+                                bottom: -3,
                                 left: 0,
                                 right: 0,
-                                top: 230,
                                 child: Glassbox(text: "Steak"),
                               ),
                             ],

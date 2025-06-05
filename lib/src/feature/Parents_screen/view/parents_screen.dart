@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:morsl_app_celina0057/src/feature/Parents_screen/riverpod/navbar_provider.dart';
-import 'package:morsl_app_celina0057/src/feature/Parents_screen/view/Navbar.dart';
+import 'package:morsl_app_celina0057/src/feature/Parents_screen/NavBar/Navbar.dart';
 
 class ParentScreen extends StatelessWidget {
   const ParentScreen({super.key});
