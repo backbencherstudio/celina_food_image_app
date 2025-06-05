@@ -28,7 +28,7 @@ class PrivacyPolicy extends ConsumerWidget {
             Navigator.pop(context);
           },
           child: Padding(
-            padding:  EdgeInsets.only(left:  24.w, right: 16.w, top: 24.h , bottom: 24.h),
+            padding:  EdgeInsets.only(left:  20.w, right: 14.w, top: 20.h , bottom: 20.h),
             child: SvgPicture.asset(Appicons.backarrow,
                      
             ),
