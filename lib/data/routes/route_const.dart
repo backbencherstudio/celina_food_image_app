@@ -17,4 +17,5 @@ class RouteName {
   static const homeScreen = "/home-screen";
   static const policyScreen = '/PrivacyPolicy';
 
+
 }

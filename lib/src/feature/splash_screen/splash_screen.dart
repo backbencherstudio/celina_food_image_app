@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:morsl_app_celina0057/src/feature/Parents_screen/view/parents_screen.dart';
 
 import '../../../core/theme/theme_extension/color_scheme.dart';
 import '../../../provider/splash_provider.dart';
@@ -16,7 +17,7 @@ class SplashScreen extends ConsumerWidget {
 
     return splashState.when(
       data: (data) {
-        return HomeScreen();
+        return ParentScreen();
       },
       error: (error, stackTrace) {
         return Scaffold(

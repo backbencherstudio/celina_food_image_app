@@ -8,13 +8,14 @@ import 'package:morsl_app_celina0057/src/feature/splash_screen/splash_screen.dar
 
 class RouteConfig {
   GoRouter goRouter = GoRouter(
-    initialLocation: RouteName.parentScreen,
+    initialLocation: RouteName.initialRoute,
     routes: [
       GoRoute(
         name: RouteName.initialRoute,
         path: RouteName.initialRoute,
         builder: (context, state) => const SplashScreen(),
       ),
+   
        GoRoute(
         name: RouteName.policyScreen,
         path: RouteName.policyScreen,
