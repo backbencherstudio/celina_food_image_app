@@ -7,19 +7,19 @@ class AppInputDecorationTheme {
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
     hintStyle: GoogleFonts.nunito(color: Color(0xFF777980),fontSize: 16.sp,fontWeight: FontWeight.w400),
     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(99.r),
-      borderSide: BorderSide(color: AppColorScheme.primaryColor),
+      borderRadius: BorderRadius.circular(12.r),
+      borderSide: BorderSide(color: AppColorScheme.onSurface),
     ),
     focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(99.r),
-      borderSide: BorderSide(color: AppColorScheme.primaryColor),
+      borderRadius: BorderRadius.circular(12.r),
+      borderSide: BorderSide(color: AppColorScheme.buttonColor),
     ),
     errorBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(99.r),
+      borderRadius: BorderRadius.circular(12.r),
       borderSide: BorderSide(color: AppColorScheme.onErrorColor),
     ),
     disabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(99.r),
+      borderRadius: BorderRadius.circular(12.r),
       borderSide: BorderSide(color: AppColorScheme.onSurface),
     ),
   );
